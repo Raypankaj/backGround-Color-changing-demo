@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #changeBtn{
+            font-size: 30px;
+            position: absolute;
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+            border: 2px solid;
+            border-radius: 20px;
+            top: 50%;
+            background-color: transparent;
+        }
+    </style>
+    <title>background Color Changer</title>
+</head>
+<body>
+    <button id="changeBtn" style="height: auto; width: auto; margin: 200px; display: flex; align-items: center;">click Me</button>
+   <script>
+    const fullPage = document.body;
+    function  changeColor(){
+        let red = Math.floor( Math.random()* 256);
+        let green = Math.floor( Math.random()* 256);
+        let blue = Math.floor( Math.random()* 256);
+        console.log(red , green , blue  );
+        fullPage.style.backgroundColor=`rgb(${red},${green}, ${blue})`;
+       
+    }
+    document.getElementById("changeBtn").addEventListener( "click", changeColor) ;
+
+   </script> 
+</body>
+</html>
